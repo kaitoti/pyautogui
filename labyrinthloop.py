@@ -14,7 +14,6 @@ enter_x , enter_y =  pyautogui.position()
 delay = 5
 # 1243,701
 # while keyboard.is_pressed('q') == False:
-# os.system('cmd /k start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit ')
 
 def loop():
     global count
@@ -44,7 +43,7 @@ if __name__ == '__main__':
     try:
         answer2 = input("Open SAO?: (y)")
         if answer2 == 'y':
-            os.system('cmd /k start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html ')
+            os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
         answer = input("(C)lick or (N)ot: \n").lower()
         loop()
     except KeyboardInterrupt:
