@@ -16,7 +16,6 @@ def click(x,y):
 """ if not fullscreen """
 enter_x , enter_y =  pyautogui.position()
 
-current_pos = pyautogui.position()
 
 def loop():
     global count
@@ -24,6 +23,7 @@ def loop():
     while True:
         click(146,251)
         # click(enter_x,enter_y)
+        pyautogui.moveTo(enter_x,enter_y)
         pause(delaytime=10) #delaytime in seconds
         count += 1
         click(673,622)
@@ -39,7 +39,7 @@ def pause(delaytime):
         print(f"{delaytime}")
         time.sleep(1)
         delaytime -= 1
-        # enter_x , enter_y =  pyautogui.position()
+        enter_x , enter_y =  pyautogui.position()
         
 count = 0
     
