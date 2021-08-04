@@ -9,6 +9,15 @@ def click(x,y):
     time.sleep(0.01)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0,0,0)
 
+def mouse_click():
+    x,y = pyautogui.position()
+    click(x,y)
+
+def start_browser(ans):
+    if ans == 'y':
+        os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
+
+
 count = 0
 enter_x , enter_y =  pyautogui.position()
 delay = 5
@@ -42,8 +51,9 @@ def pause(delaytime):
 if __name__ == '__main__':
     try:
         answer2 = input("Open SAO?: (y)")
-        if answer2 == 'y':
-            os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
+        # if answer2 == 'y':
+        #     os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
+        start_browser(answer2)
         answer = input("(C)lick or (N)ot: \n").lower()
         loop()
     except KeyboardInterrupt:
