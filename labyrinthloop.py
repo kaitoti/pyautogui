@@ -13,7 +13,7 @@ def mouse_click():
     x,y = pyautogui.position()
     click(x,y)
 
-def start_browser(ans):
+def start_browser(ans='n'):
     if ans == 'y':
         os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
 
