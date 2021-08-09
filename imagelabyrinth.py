@@ -11,6 +11,7 @@ enter_x , enter_y =  pyautogui.position()
 count = 0
 master = 0
 data = []
+ans = input('Click(y) or not: ')
 print('Starting')
 try:
     while True:
@@ -21,7 +22,10 @@ try:
             click(x,y)
             time.sleep(0.2)
             click(x+95,y)
-            pyautogui.moveTo(enter_x,enter_y)
+            if ans == 'y':
+                click(enter_x,enter_y)
+            else:
+                pyautogui.moveTo(enter_x,enter_y)
             master+=1
             # if master == 10: break
         else:
@@ -34,4 +38,4 @@ try:
 
 except KeyboardInterrupt:
     print('\nDone {}'.format(master))
-    print('Averaged {} in '.format(sum(data)/len(data),len(data)))
+    print('Averaged {:2f} in '.format(sum(data)/len(data),len(data)))
