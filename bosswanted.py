@@ -27,8 +27,7 @@ try:
                     click(enter_x,enter_y)
                 else:
                     pyautogui.moveTo(enter_x,enter_y)
-                except: continue
-                
+            except: continue
         elif pyautogui.locateOnScreen(image_fs):
             try:
                 count = 0
