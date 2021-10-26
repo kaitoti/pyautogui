@@ -28,18 +28,20 @@ start_time = time.perf_counter()
 try:
     while True:
         if pyautogui.locateOnScreen(image):
-            if count != 0: data.append(count)
-            count = 0
-            x, y = pyautogui.locateCenterOnScreen(image)
-            click(x,y)
-            time.sleep(0.2)
-            click(x+95,y)
-            if ans == 'y':
-                click(enter_x,enter_y)
-            else:
-                pyautogui.moveTo(enter_x,enter_y)
-            master+=1
-            # if master == 10: break
+            try:
+                if count != 0: data.append(count)
+                count = 0
+                x, y = pyautogui.locateCenterOnScreen(image)
+                click(x,y)
+                time.sleep(0.2)
+                click(x+95,y)
+                if ans == 'y':
+                    click(enter_x,enter_y)
+                else:
+                    pyautogui.moveTo(enter_x,enter_y)
+                master+=1
+                # if master == 10: break
+            except: continue
         else:
             # message = 'Not found'
             # print(count, end='')

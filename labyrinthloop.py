@@ -50,7 +50,7 @@ def pause(delaytime):
 
 if __name__ == '__main__':
     try:
-        answer2 = input("Open SAO?: (y)")
+        answer2 = input("Open SAO?: (y)").lower()
         # if answer2 == 'y':
         #     os.system('start "" "chrome.exe" --new-window --app=https://saogamesource.heatgames.me/sao2/beta/play_pc.html & exit')
         start_browser(answer2)
