@@ -1,6 +1,5 @@
 __pycache__/*.pyc
 .vscode/settings.json
 test.py
-*.png
 spam.py
 troll.py
