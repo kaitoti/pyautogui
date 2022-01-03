@@ -1,4 +1,5 @@
-This is scripts for autoplaying sao heatgames webgame
+This is scripts for autoplaying sao heatgames webgame  
+- need to pip install pyautogui  
 
 Scripts to be used are:  
 > bosswanted.py(auto wantedboss at smallest zoom-25% ).  
